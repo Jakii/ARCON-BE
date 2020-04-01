@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\HDC\\Nueva carpeta\\ArconApi\\ArconApi.csproj": {}
+    "C:\\HDC\\ARCONBE\\ArconApi\\ArconApi.csproj": {}
   },
   "projects": {
-    "C:\\HDC\\Nueva carpeta\\ArconApi\\ArconApi.csproj": {
+    "C:\\HDC\\ARCONBE\\ArconApi\\ArconApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\HDC\\Nueva carpeta\\ArconApi\\ArconApi.csproj",
+        "projectUniqueName": "C:\\HDC\\ARCONBE\\ArconApi\\ArconApi.csproj",
         "projectName": "ArconApi",
-        "projectPath": "C:\\HDC\\Nueva carpeta\\ArconApi\\ArconApi.csproj",
+        "projectPath": "C:\\HDC\\ARCONBE\\ArconApi\\ArconApi.csproj",
         "packagesPath": "C:\\Users\\EVELIN\\.nuget\\packages\\",
-        "outputPath": "C:\\HDC\\Nueva carpeta\\ArconApi\\obj\\",
+        "outputPath": "C:\\HDC\\ARCONBE\\ArconApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

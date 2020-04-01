@@ -13,6 +13,16 @@ namespace ArconApi.Data
             : base(options)
         {}
         public DbSet<Category> Categories { get; set;}
+        public DbSet<Status> Statuses { get; set;}
+        public DbSet<Rol> Rols { get; set;}
+        public DbSet<UserApp> UsersApp { get; set;}
+        public DbSet<UserProfile> UserProfiles { get; set;}
+
+        
+        
+
+
+
         
         
     }
