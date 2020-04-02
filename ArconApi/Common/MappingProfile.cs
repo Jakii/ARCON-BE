@@ -1,5 +1,6 @@
 using AutoMapper;
 using ArconApi.Feature.Category;
+using ArconApi.Features.Users.UsersApps;
 using ArconApi.Data.Models;
 namespace ArconApi.Common
 {
@@ -8,6 +9,7 @@ namespace ArconApi.Common
         public MappingProfile()
         {
             CreateMap<Category, CategoryDto>();
+            CreateMap<UserApp, UserAppDto>();
         }
     }
 }

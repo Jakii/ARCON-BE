@@ -44,12 +44,12 @@ namespace ArconApi.Data.Models
                 };
             }
 
-            public Builder WhitEmail(string email)
+            public Builder WhithEmail(string email)
             {
                 _userapp.Email=email;
                 return this;
             }
-            public Builder WhitBirthDate(DateTime birthDate)
+            public Builder WhithBirthDate(DateTime birthDate)
             {
                 _userapp.BirthDate=birthDate;
                 return this;

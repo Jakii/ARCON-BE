@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ArconApi.Features.Categories;
+using ArconApi.Features.Users.UsersApps;
 using Microsoft.OpenApi.Models;
 using AutoMapper;
 using ArconApi.Common;
@@ -44,6 +45,7 @@ namespace ArconApi
 
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         services.AddTransient<CategoryAppServices>();
+        services.AddTransient<UserAppServices>();
 
       
          var mappingConfig= new MapperConfiguration(mc=>
