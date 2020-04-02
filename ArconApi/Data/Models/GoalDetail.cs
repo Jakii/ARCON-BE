@@ -19,7 +19,7 @@ namespace ArconApi.Data.Models
         public bool IsComplete { get; set; }
         public DateTime TransactionDate { get; set; }
         public Goal Goal { get; set; }
-        public Activity Activity { get; set; }
+        public GoalActivity Activity { get; set; }
 
         internal void SetIsComplete(bool isComplete)
         {

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ArconApi.Data.Models{
-    public class Activity{
+    public class GoalActivity{
         [Key]
         public int ActivityId { get; set; }
         public string  Name { get; set; }
@@ -11,16 +11,16 @@ namespace ArconApi.Data.Models{
         {
             this.Name=name;
         }
-        public sealed class Buider
+        public sealed class Builder
         {
-            private readonly Activity _activity;
-            public Buider(string name)
+            private readonly GoalActivity _activity;
+            public Builder(string name)
             {
-                _activity= new Activity{
+                _activity= new GoalActivity{
                     Name=name
                 };              
             }
-            public Activity Build(){
+            public GoalActivity Build(){
                 return _activity;
             }
             
