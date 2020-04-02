@@ -10,6 +10,7 @@ namespace ArconApi.Data.Models
         public int StatusId { get; set; }
         public string StatusName { get; set; }
         public string Description { get; set; }
+        public string Description2 { get; set; }
         public ICollection<Goal> Goals { get; set; }
 
         internal void SetStatusName(string statusName)
