@@ -1,6 +1,7 @@
 using AutoMapper;
 using ArconApi.Feature.Category;
 using ArconApi.Features.Users.UsersApps;
+using ArconApi.Features.Users.UserProfiles;
 using ArconApi.Data.Models;
 using ArconApi.Feature.Activities;
 using ArconApi.Features.Goals;
@@ -13,8 +14,12 @@ namespace ArconApi.Common
         {
             CreateMap<Category, CategoryDto>();
             CreateMap<UserApp, UserAppDto>();
+<<<<<<< HEAD
             CreateMap<GoalActivity, GoalActivityDto>();
             CreateMap<Goal, GoalDto>();
+=======
+            CreateMap<UserProfile, UserProfileDto>();
+>>>>>>> c45383fae87ef111490081e6e93add7498ace5ec
         }
     }
 }

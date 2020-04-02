@@ -29,7 +29,7 @@ namespace ArconApi.Features.Users.UsersApps
                  };
            }else 
            {
-               return new Response{ Message="La lista de categorias esta vacia"};
+               return new Response{ Message="La lista de Usuarios esta vacia"};
            }
 
         }
