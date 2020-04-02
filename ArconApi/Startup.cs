@@ -20,6 +20,7 @@ using Microsoft.OpenApi.Models;
 using AutoMapper;
 using ArconApi.Common;
 using ArconApi.Feature.Activities;
+using ArconApi.Features.Goals;
 
 namespace ArconApi
 {
@@ -53,10 +54,11 @@ namespace ArconApi
         services.AddTransient<UserProfileAppService>();
         services.AddTransient<RollAppServices>();
 
+        services.AddTransient<GoalAppServices>();
          var mappingConfig= new MapperConfiguration(mc=>
-            {
-                mc.AddProfile(new MappingProfile());
-            });
+        {
+            mc.AddProfile(new MappingProfile());
+        });
 
             IMapper mapper= mappingConfig.CreateMapper();
            services.AddSingleton(mapper);
