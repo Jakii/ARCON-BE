@@ -48,6 +48,18 @@ namespace ArconApi.Features.Goals
             }
 
         }
+        public async Task<Response> GetById(int goalId)
+        {
+            Goal goal = await _goalRepository.GetAsync(goalId);
+           
+            if(goal!=null )
+            {
+                return new Response { Data =  _mapper.Map<GoalDto>(goal) };
+            }else 
+            {
+                return new Response{ Message=$"No se encontro el goal con id:{goalId}"};
+            }
+        }
         public async Task<Response> GetAllByUserProfileId(int userProfileId)
         {
             IEnumerable<Goal> goals = await _goalRepository.FindAllAsync(x=>x.ProfileId==userProfileId);
@@ -73,11 +85,13 @@ namespace ArconApi.Features.Goals
 
             goal.SetAmount(request.Amount);
             goal.SetDescription(request.Description);
+            goal.SetAmount(request.Amount);
             goal.SetProgress(request.Progress);
             goal.SetStatusId(request.StatusId);
             goal.SetTitle(request.Title);
             goal.SetTransactionDate(request.TransactionDate);
-           
+            goal.SetTransferDate(request.TransferDate);
+            goal.SetUpdateDate(request.UpdateDate);
             await _goalRepository.SaveAsync();
             return new Response { Data = _mapper.Map<Goal>(goal) };
         }
@@ -90,7 +104,6 @@ namespace ArconApi.Features.Goals
         {
             if (disposing)
             {
-                
                 _goalRepository.Dispose();
             }
         }

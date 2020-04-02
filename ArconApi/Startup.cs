@@ -19,6 +19,7 @@ using Microsoft.OpenApi.Models;
 using AutoMapper;
 using ArconApi.Common;
 using ArconApi.Feature.Activities;
+using ArconApi.Features.Goals;
 
 namespace ArconApi
 {
@@ -48,16 +49,13 @@ namespace ArconApi
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         services.AddTransient<CategoryAppServices>();
         services.AddTransient<UserAppServices>();
-<<<<<<< HEAD
         services.AddTransient<ActivityAppServices>();
-=======
         services.AddTransient<UserProfileAppService>();
->>>>>>> c45383fae87ef111490081e6e93add7498ace5ec
-
+        services.AddTransient<GoalAppServices>();
          var mappingConfig= new MapperConfiguration(mc=>
-            {
-                mc.AddProfile(new MappingProfile());
-            });
+        {
+            mc.AddProfile(new MappingProfile());
+        });
 
             IMapper mapper= mappingConfig.CreateMapper();
            services.AddSingleton(mapper);
