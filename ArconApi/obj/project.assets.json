@@ -5831,24 +5831,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Moap\\.nuget\\packages\\": {}
+    "C:\\Users\\EVELIN\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HDC\\G\\ArconApi\\ArconApi.csproj",
+      "projectUniqueName": "C:\\HDC\\ARCONBE\\ArconApi\\ArconApi.csproj",
       "projectName": "ArconApi",
-      "projectPath": "D:\\HDC\\G\\ArconApi\\ArconApi.csproj",
-      "packagesPath": "C:\\Users\\Moap\\.nuget\\packages\\",
-      "outputPath": "D:\\HDC\\G\\ArconApi\\obj\\",
+      "projectPath": "C:\\HDC\\ARCONBE\\ArconApi\\ArconApi.csproj",
+      "packagesPath": "C:\\Users\\EVELIN\\.nuget\\packages\\",
+      "outputPath": "C:\\HDC\\ARCONBE\\ArconApi\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Moap\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\EVELIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

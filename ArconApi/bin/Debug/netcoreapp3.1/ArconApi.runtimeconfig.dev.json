@@ -1,8 +1,9 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Moap\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Moap\\.nuget\\packages"
+      "C:\\Users\\EVELIN\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\EVELIN\\.nuget\\packages",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }
 }
