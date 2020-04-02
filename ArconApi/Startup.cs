@@ -17,6 +17,7 @@ using ArconApi.Features.Users.UsersApps;
 using Microsoft.OpenApi.Models;
 using AutoMapper;
 using ArconApi.Common;
+using ArconApi.Feature.Activities;
 
 namespace ArconApi
 {
@@ -46,8 +47,8 @@ namespace ArconApi
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         services.AddTransient<CategoryAppServices>();
         services.AddTransient<UserAppServices>();
+        services.AddTransient<ActivityAppServices>();
 
-      
          var mappingConfig= new MapperConfiguration(mc=>
             {
                 mc.AddProfile(new MappingProfile());

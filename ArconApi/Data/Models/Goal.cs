@@ -25,7 +25,6 @@ namespace ArconApi.Data.Models{
         public DateTime UpdateDate { get; set; }
         public DateTime CompleteDate { get; set; }
         public DateTime TransferDate { get; set; }
-
         public UserProfile UserProfile { get; set; }
         public Status Status { get; set; }
         public ICollection<GoalDetail> GoalDetail { get; set; }
