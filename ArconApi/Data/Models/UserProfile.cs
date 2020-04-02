@@ -35,6 +35,10 @@ namespace ArconApi.Data.Models
         {
             this.IsActive=isActive;
         }
+        internal void SetUser(int userId)
+        {
+            this.UserAppId=userId;
+        }
         public sealed class Builder 
         {
             private readonly UserProfile _profile;

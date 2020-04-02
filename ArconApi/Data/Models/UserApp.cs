@@ -15,5 +15,50 @@ namespace ArconApi.Data.Models
         public bool IsActive { get; set; }
         public ICollection<UserProfile> Profiles { get; set; }
 
+        internal void SetName(string name)
+        {
+            this.Name=name;
+        }
+         internal void SetEmail(string email)
+        {
+            this.Email=email;
+        }
+        internal void SetBirthDate(DateTime birthDate)
+        {
+            this.BirthDate=birthDate;
+        }
+         internal void SetIsActive(bool isActive)
+        {
+            this.IsActive=isActive;
+        }
+        public sealed class Builder 
+        {
+            private readonly UserApp _userapp;
+            public Builder(string userName, string name, bool isActive)
+            {
+                _userapp= new UserApp 
+                {
+                    UserName=userName,
+                    Name=name,
+                    IsActive=isActive
+                };
+            }
+
+            public Builder WhitEmail(string email)
+            {
+                _userapp.Email=email;
+                return this;
+            }
+            public Builder WhitBirthDate(DateTime birthDate)
+            {
+                _userapp.BirthDate=birthDate;
+                return this;
+            }
+
+            public UserApp Build()
+            {
+                return _userapp;
+            }
+        }    
     }
 }

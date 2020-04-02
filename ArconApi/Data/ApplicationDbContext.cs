@@ -17,13 +17,9 @@ namespace ArconApi.Data
         public DbSet<Rol> Rols { get; set;}
         public DbSet<UserApp> UsersApp { get; set;}
         public DbSet<UserProfile> UserProfiles { get; set;}
-
-        
-        
-
-
-
-        
+        public DbSet<Activity> Activities { get; set;}
+        public DbSet<Goal> Goals { get; set;}
+        public DbSet<GoalDetail> GoalDetails { get; set; }
         
     }
 }

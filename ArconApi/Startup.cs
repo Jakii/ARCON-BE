@@ -36,11 +36,11 @@ namespace ArconApi
         services.AddDbContext<ApplicationDbContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         services.AddControllers();
              
-        // Register the Swagger generator, defining 1 or more Swagger documents
-        // services.AddSwaggerGen(c =>
-        // {
-        // c.SwaggerDoc("v1", new OpenApiInfo { Title = "Arcon Api", Version = "v1" });
-        // });
+        //Register the Swagger generator, defining 1 or more Swagger documents
+        services.AddSwaggerGen(c =>
+        {
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "Arcon Api", Version = "v1" });
+        });
 
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         services.AddTransient<CategoryAppServices>();
@@ -62,41 +62,41 @@ namespace ArconApi
                     .AllowAnyHeader());
                     
                     
-            });
-        services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddRazorPages();
-                 services.Configure<IdentityOptions>(options =>
-        {
-            // Password settings.
-            options.Password.RequireDigit = true;
-            options.Password.RequireLowercase = true;
-            options.Password.RequireNonAlphanumeric = true;
-            options.Password.RequireUppercase = true;
-            options.Password.RequiredLength = 6;
-            options.Password.RequiredUniqueChars = 1;
+           });
+        // services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        //         .AddEntityFrameworkStores<ApplicationDbContext>();
+        //     services.AddRazorPages();
+        //          services.Configure<IdentityOptions>(options =>
+        // {
+        //     // Password settings.
+        //     options.Password.RequireDigit = true;
+        //     options.Password.RequireLowercase = true;
+        //     options.Password.RequireNonAlphanumeric = true;
+        //     options.Password.RequireUppercase = true;
+        //     options.Password.RequiredLength = 6;
+        //     options.Password.RequiredUniqueChars = 1;
 
-            // Lockout settings.
-            options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
-            options.Lockout.MaxFailedAccessAttempts = 5;
-            options.Lockout.AllowedForNewUsers = true;
+        //     // Lockout settings.
+        //     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+        //     options.Lockout.MaxFailedAccessAttempts = 5;
+        //     options.Lockout.AllowedForNewUsers = true;
 
-            // User settings.
-            options.User.AllowedUserNameCharacters =
-            "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
-            options.User.RequireUniqueEmail = false;
-        });
+        //     // User settings.
+        //     options.User.AllowedUserNameCharacters =
+        //     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+        //     options.User.RequireUniqueEmail = false;
+        // });
 
-        services.ConfigureApplicationCookie(options =>
-        {
-            // Cookie settings
-            options.Cookie.HttpOnly = true;
-            options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+        // services.ConfigureApplicationCookie(options =>
+        // {
+        //     // Cookie settings
+        //     options.Cookie.HttpOnly = true;
+        //     options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
 
-            options.LoginPath = "/Identity/Account/Login";
-            options.AccessDeniedPath = "/Identity/Account/AccessDenied";
-            options.SlidingExpiration = true;
-        });
+        //     options.LoginPath = "/Identity/Account/Login";
+        //     options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+        //     options.SlidingExpiration = true;
+        // });
 
 }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -104,28 +104,28 @@ namespace ArconApi
         {
              app.UseCors("CorsPolicy");
             // Enable middleware to serve generated Swagger as a JSON endpoint.
-            //app.UseSwagger();
+            app.UseSwagger();
            
 
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
-            // specifying the Swagger JSON endpoint.
-            // app.UseSwaggerUI(c =>
-            // {
-            // c.SwaggerEndpoint("/swagger/v1/swagger.json", "Arcon Api V1");
-            // c.RoutePrefix = string.Empty;
-            // });
+            //specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "Arcon Api V1");
+            c.RoutePrefix = string.Empty;
+            });
 
             if (env.IsDevelopment())
             {
             app.UseDeveloperExceptionPage();
-            app.UseDatabaseErrorPage();
+           // app.UseDatabaseErrorPage();
             }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
+            // else
+            // {
+            //     app.UseExceptionHandler("/Error");
+            //     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+            //     app.UseHsts();
+            // }
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
@@ -135,15 +135,15 @@ namespace ArconApi
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapRazorPages();
-            });
-
             // app.UseEndpoints(endpoints =>
             // {
-            // endpoints.MapControllers();
+            //     endpoints.MapRazorPages();
             // });
+
+            app.UseEndpoints(endpoints =>
+            {
+            endpoints.MapControllers();
+            });
         }
     }
 }
