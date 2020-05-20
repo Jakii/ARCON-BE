@@ -7,6 +7,7 @@ using ArconApi.Feature.Activities;
 using ArconApi.Features.Goals;
 using ArconApi.Features.Roles;
 using ArconApi.Features.Statuses;
+using ArconApi.Features.Goals.GoalDetails;
 
 namespace ArconApi.Common
 {
@@ -18,6 +19,7 @@ namespace ArconApi.Common
             CreateMap<UserApp, UserAppDto>();
             CreateMap<GoalActivity, GoalActivityDto>();
             CreateMap<Goal, GoalDto>();
+            CreateMap<GoalDetail, GoalDetailDto>();
             CreateMap<UserProfile, UserProfileDto>();
             CreateMap<Rol, RollDto>();
             CreateMap<Status, StatusDto>();

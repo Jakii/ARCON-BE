@@ -22,6 +22,7 @@ using ArconApi.Common;
 using ArconApi.Feature.Activities;
 using ArconApi.Features.Goals;
 using ArconApi.Features.Statuses;
+using ArconApi.Features.Goals.GoalDetails;
 
 namespace ArconApi
 {
@@ -56,7 +57,9 @@ namespace ArconApi
         services.AddTransient<RollAppServices>();
         services.AddTransient<GoalAppServices>();
         services.AddTransient<StatusAppServices>();
+        services.AddTransient<GoalDetailAppServices>();
 
+            
          var mappingConfig= new MapperConfiguration(mc=>
         {
             mc.AddProfile(new MappingProfile());

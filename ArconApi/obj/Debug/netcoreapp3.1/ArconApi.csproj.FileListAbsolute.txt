@@ -149,7 +149,6 @@ C:\HDC\ARCONBE\ArconApi\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\HDC\ARCONBE\ArconApi\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\HDC\ARCONBE\ArconApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\HDC\ARCONBE\ArconApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\HDC\ARCONBE\ArconApi\obj\Debug\netcoreapp3.1\ArconApi.csprojAssemblyReference.cache
 C:\HDC\ARCONBE\ArconApi\obj\Debug\netcoreapp3.1\ArconApi.csproj.CoreCompileInputs.cache
 C:\HDC\ARCONBE\ArconApi\obj\Debug\netcoreapp3.1\ArconApi.MvcApplicationPartsAssemblyInfo.cs
 C:\HDC\ARCONBE\ArconApi\obj\Debug\netcoreapp3.1\ArconApi.MvcApplicationPartsAssemblyInfo.cache
