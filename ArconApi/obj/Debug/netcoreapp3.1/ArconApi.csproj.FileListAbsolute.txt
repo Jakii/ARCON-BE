@@ -267,3 +267,6 @@ D:\HDC\G\ArconApi\obj\Debug\netcoreapp3.1\ArconApi.csproj.CopyComplete
 D:\HDC\G\ArconApi\obj\Debug\netcoreapp3.1\staticwebassets\ArconApi.StaticWebAssets.Manifest.cache
 D:\HDC\G\ArconApi\obj\Debug\netcoreapp3.1\staticwebassets\ArconApi.StaticWebAssets.xml
 D:\HDC\G\ArconApi\obj\Debug\netcoreapp3.1\ArconApi.genruntimeconfig.cache
+C:\HDC\ARCONBE\ArconApi\bin\Debug\netcoreapp3.1\app.yaml
+C:\HDC\ARCONBE\ArconApi\bin\Debug\netcoreapp3.1\bin\Release\netcoreapp3.1\publish\app.yaml
+C:\HDC\ARCONBE\ArconApi\obj\Debug\netcoreapp3.1\ArconApi.csprojAssemblyReference.cache

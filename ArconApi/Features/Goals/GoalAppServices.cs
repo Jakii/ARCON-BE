@@ -28,6 +28,8 @@ namespace ArconApi.Features.Goals
                                 .WithTransactionDate(request.TransactionDate)
                                 .WithUpdateDate(request.UpdateDate)
                                 .WithTransferDate(request.TransferDate)
+                                .WithImage(request.Image)
+
                                 .Build();
            
             await _goalRepository.AddAsyn(Goal);

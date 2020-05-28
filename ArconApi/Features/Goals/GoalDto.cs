@@ -15,5 +15,6 @@ namespace ArconApi.Features.Goals
         public DateTime UpdateDate { get; set; }
         public DateTime CompleteDate { get; set; }
         public DateTime TransferDate { get; set; }
+        public byte[] Image { get; set; }
     }
 }

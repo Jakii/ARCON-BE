@@ -28,6 +28,7 @@ namespace ArconApi.Data.Models{
         public UserProfile UserProfile { get; set; }
         public Status Status { get; set; }
         public ICollection<GoalDetail> GoalDetail { get; set; }
+        public byte[] Image { get; set; }
 
         internal void SetTitle(string title)
         {
@@ -63,6 +64,10 @@ namespace ArconApi.Data.Models{
         internal void SetTransferDate(DateTime transferDate)
         {
             this.TransferDate=transferDate;
+        }
+        internal void SetImagen(byte[] image)
+        {
+            this.Image = image;
         }
         public sealed class Builder
         {
@@ -107,7 +112,12 @@ namespace ArconApi.Data.Models{
                _goal.TransferDate=transferDate;
                return this;
            }
-           public Goal Build(){
+            public Builder WithImage(byte[] image)
+            {
+                _goal.Image = image;
+                return this;
+            }
+            public Goal Build(){
                return _goal;
            }
         }
